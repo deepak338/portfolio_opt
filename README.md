@@ -52,86 +52,10 @@ This project implements **Modern Portfolio Theory (MPT)** to construct optimal i
 | **Statistics** | statsmodels |
 | **Notebooks** | Jupyter Notebook |
 
----
-
-## 📦 Installation & Setup
-
-### **Prerequisites**
-- Python 3.8 or higher
-- pip package manager
-
-### **Step 1: Clone the Repository**
-```bash
-git clone https://github.com/deepak338/portfolio_opt.git
-cd portfolio_opt
-```
-
-### **Step 2: Create Virtual Environment (Optional but Recommended)**
-```bash
-# On Windows
-python -m venv venv
-venv\Scripts\activate
-
-# On macOS/Linux
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### **Step 3: Install Required Packages**
-```bash
-pip install -r requirements.txt
-```
-
-**Or install manually:**
-```bash
-pip install pandas numpy scipy matplotlib seaborn yfinance cvxpy plotly jupyter
-```
-
-### **Step 4: Verify Installation**
-```bash
-python -c "import pandas, numpy, scipy, matplotlib; print('All packages installed successfully!')"
-```
 
 ---
 
-## 🚀 Getting Started
 
-### **Quick Start Example**
-
-Here's how to run a basic portfolio optimization:
-
-```python
-# Import required libraries
-import pandas as pd
-import numpy as np
-from portfolio_optimizer import PortfolioOptimizer
-
-# Define stock tickers and date range
-tickers = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA']
-start_date = '2020-01-01'
-end_date = '2024-01-01'
-
-# Initialize optimizer
-optimizer = PortfolioOptimizer(tickers, start_date, end_date)
-
-# Get optimal portfolio
-optimal_weights = optimizer.maximize_sharpe_ratio()
-print("Optimal Portfolio Weights:")
-print(optimal_weights)
-
-# Visualize efficient frontier
-optimizer.plot_efficient_frontier()
-```
-
-### **Running the Jupyter Notebook**
-
-For detailed analysis with visualizations:
-
-```bash
-jupyter notebook portfolio_optimization_analysis.ipynb
-```
-
----
 
 ## 📂 Project Structure
 
@@ -221,56 +145,11 @@ optimizer.plot_efficient_frontier(show_cml=True)
 - Green star: Minimum variance portfolio
 - Individual assets plotted as scatter points
 
----
-
-### **2. Correlation Heatmap**
-Visualizes how assets move together.
-
-```python
-optimizer.plot_correlation_matrix()
-```
-
-**Interpretation:**
-- Values close to +1: Assets move together (high correlation)
-- Values close to -1: Assets move opposite (negative correlation)
-- Values near 0: No clear relationship
-- Diversification benefit comes from low/negative correlations
 
 ---
 
-### **3. Optimal Asset Allocation**
-Pie chart showing recommended portfolio weights.
 
-```python
-optimizer.plot_allocation(optimal_weights)
-```
 
-**Use Case:**
-- If you have $10,000 to invest, this shows how to split it
-- Example: 30% AAPL, 25% MSFT, 20% GOOGL, etc.
-
----
-
-### **4. Historical Performance Comparison**
-Compares optimized portfolio vs equal-weight portfolio vs individual assets.
-
-```python
-optimizer.plot_cumulative_returns()
-```
-
-**Insights:**
-- Shows if optimization strategy beats simple equal allocation
-- Visualizes compound growth over time
-- Identifies periods of outperformance/underperformance
-
----
-
-### **5. Risk-Return Scatter**
-Individual asset risk vs return positioning.
-
-```python
-optimizer.plot_risk_return_scatter()
-```
 
 **Key Takeaways:**
 - Top-right: High risk, high return assets
