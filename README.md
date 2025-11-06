@@ -57,34 +57,7 @@ This project implements **Modern Portfolio Theory (MPT)** to construct optimal i
 
 
 
-## 📂 Project Structure
 
-```
-portfolio_opt/
-│
-├── data/                          # Raw and processed data
-│   ├── raw/                       # Downloaded stock prices
-│   └── processed/                 # Cleaned datasets
-│
-├── notebooks/                     # Jupyter notebooks
-│   └── portfolio_optimization_analysis.ipynb
-│
-├── src/                           # Source code
-│   ├── data_loader.py            # Data collection functions
-│   ├── portfolio_optimizer.py    # Optimization algorithms
-│   ├── risk_metrics.py           # Risk calculation functions
-│   └── visualizations.py         # Plotting functions
-│
-├── results/                       # Output files
-│   ├── figures/                  # Generated plots
-│   └── reports/                  # Analysis reports
-│
-├── requirements.txt               # Python dependencies
-├── README.md                      # This file
-└── LICENSE                        # MIT License
-```
-
----
 
 ## 📊 Methodology & Theory
 
